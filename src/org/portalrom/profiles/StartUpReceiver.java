@@ -1,6 +1,5 @@
 /*
-* Copyright (C) 2015 The CyanogenMod Project
-*               2020 The LineageOS Project
+* Copyright (C) 2022 The Portal Project
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -15,7 +14,7 @@
 * limitations under the License.
 */
 
-package org.lineageos.profiles;
+package org.portalrom.profiles;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;

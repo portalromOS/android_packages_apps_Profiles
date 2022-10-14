@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2007 The Android Open Source Project
- * Copyright (C) 2013 The CyanogenMod Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.profiles;
+package org.portalrom.profiles;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -28,8 +27,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import lineageos.app.Profile;
-import lineageos.app.ProfileManager;
+import portalrom.app.Profile;
+import portalrom.app.ProfileManager;
 
 import com.android.internal.app.AlertActivity;
 import com.android.internal.app.AlertController;

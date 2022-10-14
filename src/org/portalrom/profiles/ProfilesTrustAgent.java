@@ -1,6 +1,5 @@
 /*
-* Copyright (C) 2015 The CyanogenMod Project
-*               2020 The LineageOS Project
+* Copyright (C) 2022 The Portal Project
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -15,7 +14,7 @@
 * limitations under the License.
 */
 
-package org.lineageos.profiles;
+package org.portalrom.profiles;
 
 import android.app.admin.DevicePolicyManager;
 import android.bluetooth.BluetoothAdapter;
@@ -35,9 +34,9 @@ import android.os.UserHandle;
 import android.service.trust.TrustAgentService;
 import android.util.ArraySet;
 import android.util.Log;
-import lineageos.app.Profile;
-import lineageos.app.ProfileManager;
-import lineageos.providers.LineageSettings;
+import portalrom.app.Profile;
+import portalrom.app.ProfileManager;
+import portalrom.providers.PortalRomSettings;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
@@ -97,7 +96,7 @@ public class ProfilesTrustAgent extends TrustAgentService {
             setManagingTrust(true);
             mObserver = new SystemProfilesSettingsObserver(mHandler);
             getContentResolver().registerContentObserver(
-                    LineageSettings.System.getUriFor(LineageSettings.System.SYSTEM_PROFILES_ENABLED),
+                    PortalRomSettings.System.getUriFor(PortalRomSettings.System.SYSTEM_PROFILES_ENABLED),
                     false, mObserver);
             mHandler.sendEmptyMessage(MSG_ON_AGENT_CREATED);
         }
@@ -321,7 +320,7 @@ public class ProfilesTrustAgent extends TrustAgentService {
 
         @Override
         public void onChange(boolean selfChange, Uri uri) {
-            if (LineageSettings.System.getUriFor(LineageSettings.System.SYSTEM_PROFILES_ENABLED)
+            if (PortalRomSettings.System.getUriFor(PortalRomSettings.System.SYSTEM_PROFILES_ENABLED)
                     .compareTo(uri) == 0) {
                 mHandler.sendEmptyMessage(MSG_UPDATE_STATE);
             }

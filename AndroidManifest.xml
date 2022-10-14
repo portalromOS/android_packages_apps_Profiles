@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015 The CyanogenMod Project
+     Copyright (C) 2022 The Portal Project
 
      Licensed under the Apache License, Version 2.0 (the "License"
      you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.lineageos.profiles">
+          package="org.portalrom.profiles">
 
     <original-package android:name="org.cyanogenmod.profiles" />
 
@@ -54,7 +54,7 @@
                   android:excludeFromRecents="true"
                   android:exported="true">
             <intent-filter>
-                <action android:name="lineageos.platform.intent.action.PROFILE_PICKER" />
+                <action android:name="portalrom.platform.intent.action.PROFILE_PICKER" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
